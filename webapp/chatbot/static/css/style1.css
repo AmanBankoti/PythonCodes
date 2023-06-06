@@ -1,0 +1,145 @@
+* {
+    text-decoration: none;
+  }
+  
+  body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f7efe5;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://t3.ftcdn.net/jpg/02/99/56/12/240_F_299561221_5WvOoUfb9Hzyki9DdQ5aDnYC9Vy1sG9o.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+  }
+
+  h1 {
+    color: #ffffff;
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  nav a:before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover:before {
+    width: 100%;
+  }
+  
+  #chat-window {
+    width: 500px;
+    margin: 0 auto;
+    background-color: rgba(
+      36,
+      36,
+      59,
+      0.8
+    );
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 100px;
+  }
+  
+  #chat-messages {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    height: calc(100vh - 200px);
+    max-height: calc(100vh - 200px);
+    overflow: auto;
+  }
+  
+  #chat-form {
+    display: flex;
+    align-items: center;
+  }
+  
+  #chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #f7efe5;
+    color: #674188;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .bot-message {
+    font-family: "Roboto", sans-serif;
+    background-color: #fffbf5; 
+    text-align: justify; 
+    padding: 15px; 
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    border-radius: 10px;
+  }
+  
+  .user-message {
+    font-family: "Nunito", sans-serif;
+    background-color: #f7efe5;
+    text-align: left; 
+    padding: 15px; 
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    border-radius: 10px;
+  }
+  .user-message img,
+  .bot-message img {
+    width: 40px; 
+    height: 40px; 
+    margin-right: 20px; 
+  }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 400px) {
+    #chat-window {
+      width: 90%;
+    }
+  }
+  .main-title {
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    margin-bottom: 0.5rem;
+    color: #fffbf5;
+    font-style: italic;
+  }
