@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenAI Image Generation</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <div class="container_for_api">
+      <h1>OpenAI Image Generation</h1>
+      <input type="text" id="keywords" placeholder="Enter keywords" />
+      <button class="my-btn" onclick="generateImage()">Generate Image</button>
+      <br />
+    </div>
+
+    <div id="imageContainer"></div>
+    <script>
+      async function generateImage() {
+        const keywords = document.getElementById("keywords").value;
+        const response = await fetch(
+          "https://api.openai.com/v1/images/generations",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization:
+                "Bearer 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",
+            },
+            body: JSON.stringify({
+              model: "image-alpha-001",
+              prompt: keywords,
+              size: "512x512",
+              n: 4,
+            }),
+          }
+        );
+        const data = await response.json();
+        const imageContainer = document.getElementById("imageContainer");
+        imageContainer.innerHTML = "";
+        data.data.forEach((imageData) => {
+          const img = document.createElement("img");
+          img.src = imageData.url;
+          img.alt = "Generated Image";
+          imageContainer.appendChild(img);
+        });
+      }
+    </script>
+  </body>
+</html>

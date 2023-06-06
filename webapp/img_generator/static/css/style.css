@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://t3.ftcdn.net/jpg/02/99/56/12/240_F_299561221_5WvOoUfb9Hzyki9DdQ5aDnYC9Vy1sG9o.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-position: center;
+  }
+  
+  header {
+    background-color: rgba(
+      36,
+      36,
+      59,
+      0.8
+    ); /* dark blue color with 80% opacity */
+    opacity: 80%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  h1 {
+    color: #ffffff;
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  input[type="text"]{
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+  }
+  
+  input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #2b395e; /* dark blue button color */
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* api test page */
+  .container_for_api {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container_for_api h1 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  
+  .container_for_api #keywords {
+    position: absolute;
+    width: 300px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 5px;
+  }
+  
+  .my-btn {
+    position: absolute;
+    top: 28%;
+    width: 200px;
+    height: 35px;
+    background-color: 2b395e;
+    border: none;
+    color: black;
+    padding: 10px, 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .my-btn:hover {
+    background-color: #0a1172;
+    color: #ffffff;
+  }
+  
+  .container_for_api #generatedImage {
+    position: absolute;
+    top: 35%;
+  }
+  
+  .imageContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  img {
+    width: 22%;
+    margin-left: 40px;
+    margin-top: 20%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .login-box {
+      width: 80%;
+    }
+  }
